@@ -6,7 +6,7 @@
 }
 
 body {
-    margin: 0 4rem 0 4rem;
+    margin: 0 10rem 0 10rem;
 }
 
 h2 {
@@ -136,4 +136,52 @@ footer {
     margin-top: 6rem;
     padding: 2rem 2rem;
     border: 0.2rem double darkgoldenrod;
+}
+
+/*draft page*/
+/*hero banner*/
+
+#draft-hero-banner {
+    margin-top: 8rem;
+}
+
+#draft-hero-banner p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#draft-sim {
+    margin-top: 6rem;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* draft block sim */
+
+#results-table {
+    text-align: left;
+    margin: 4rem 0;
+    line-height: 2rem;
+}
+
+th, td {
+    padding: 0.5rem;
+}
+
+.price, .year {
+    text-align: center;
+}
+
+.sets {
+    background-color: rgb(231, 189, 84);
+    font-style: italic;
+    font-weight: bold;
+}
+
+th {
+    border-bottom: gray .5px solid;
 }

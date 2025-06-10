@@ -17,5 +17,63 @@
             </ul>
         </div>
     </nav>
+
+    <section id="draft-hero-banner">
+        <p>In Chaos Draft, one exciting twist on the traditional format is drafting by set blocks—grouping booster packs by their original sets or themed blocks, such as Ravnica, Zendikar, or Innistrad. Instead of using completely random packs from across Magic’s history, players can draft from a curated selection within a block, preserving some synergy while still embracing the unpredictability of Chaos Draft. For example, including one pack each from Ravnica: City of Guilds, Guildpact, and Dissension offers a semi-cohesive draft environment filled with multicolor mechanics, while still giving players a taste of variety and surprise. This approach strikes a balance between chaos and cohesion, appealing to players who enjoy wild interactions but still want some mechanical familiarity.</p>
+    </section>
+
+    <section id="draft-sim">
+
+        <h2>Choose a block:</h2>
+        
+        <form>
+            <div class="form-group">
+                <label for="draft-block">Draft Block</label>
+                    <select name="draft-block" id="draft-block">
+                        <option value="">--Select a block--</option>
+                        <option value="Ixalan Block">Ixalan Block</option>
+                        <option value="Phyrexian Block">Phyrexian Block</option>
+                        <option value="Innistrad Block">Innistrad Block</option>
+                        <option value="Ravnica Block">Ravnica Block</option>
+                        <option value="Tarkir Block">Tarkir Block</option>
+                    </select>
+                    <input type="submit" id="submit"> 
+            </div>            
+        </form>
+    </section>
+
+    <section id="results-table">
+
+        <table>
+            <tr>
+                <th>Pack</th>
+                <th>Release Year</th>
+                <th>Average Price</th>
+                <th>Chase Cards</th>
+            </tr>
+            <tr>
+                <td class="sets">Ixalan</td>
+                <td class="year">2017</td>
+                <td class="price">£7</td>
+                <td>Carnage Tyrant, Colossal Dreadmaw, Ancient Brontodon</td>
+            </tr>
+            <tr>
+                <td class="sets">Rivals of Ixalan</td>
+                <td class="year">2018</td>
+                <td class="price">£7</td>
+                <td>Bonehoard Dracosaur, Twilight Prophet, Huatli, Radiant Champion</td>
+
+            </tr>
+            <tr>
+                <td class="sets">Caverns of Ixalan</td>
+                <td class="year">2023</td>
+                <td class="price">£5</td>
+                <td>Ghalta, Stampede Tyrant, The Skullspore Nexus, Ojer Kaslem, Deepest Growth, Ojer Axonil</td>
+            </tr>
+        </table>
+
+
+    </section>
+
 </body>
 </html>
