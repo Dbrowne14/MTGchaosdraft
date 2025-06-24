@@ -21,65 +21,157 @@
     <section class="text-hero-banner">
         <p>In Magic: The Gathering chaos draft, score counters are a casual way to track and reward creative or thematic achievements during gameplay, adding an extra layer of fun beyond simply winning matches. These counters aren't part of official rules, but players assign them for cool plays, synergy-based combos, or fulfilling block-specific challenges (like casting a card from every color, assembling a tribal combo, or activating a planeswalker three turns in a row). Each player earns points throughout the event, and at the end, the highest scorer might win a bonus prize or bragging rights. Score counters help keep chaos drafts lighthearted and engaging, especially when playing with mismatched sets and unpredictable decks.</p>
     </section>
+<section id="player-entry-box">
+    <h2 class="score-page-titles">Enter Players</h2>
+    <div id="player-entry-panel">
+        <div id="player-name-left-box">
+            <form>
+                <div id="score-form">
+                    <label for ="player-number">Number of Players</label>
+                        <select name="player-number" id="player-number">
+                            <option value="">----</option>
+                            <option value ="4">4</option>
+                            <option value ="5">5</option>
+                            <option value ="6">6</option>
+                            <option value ="7">7</option>
+                            <option value ="8">8</option>
+                        </select>
+                        <button id="submit-player" type="button">Confirm</button>
+                </div>
+            </form>
 
-    <form>
-        <div id="score-form">
-            <label for ="player-number">Number of Players</label>
-                <select name="player-number" id="player-number">
-                    <option value="">----</option>
-                    <option value ="4">4</option>
-                    <option value ="5">5</option>
-                    <option value ="6">6</option>
-                    <option value ="7">7</option>
-                    <option value ="8">8</option>
-                </select>
-                <button id="submit-player" type="button">Confirm</button>
+            <div id="enter-player-name">
+            
+                <form class ="player-4 player-5 player-6 player-7 player-8">
+                <input type="text" name ="player-1" value = "Enter Name">
+                <button class="confirm-player" id="player-1-button" type="button">Confirm</button>
+                </form>
+
+                <form class ="player-4 player-5 player-6 player-7 player-8">
+                <input type="text" name ="player-2" value = "Enter Name">
+                <button class="confirm-player" id="player-2-button" type="button">Confirm</button>
+                </form>
+
+                <form class ="player-4 player-5 player-6 player-7 player-8">
+                <input type="text" name ="player-3" value = "Enter Name">
+                <button class="confirm-player" id="player-3-button" type="button">Confirm</button>
+                </form>
+
+                <form class ="player-4 player-5 player-6 player-7 player-8">
+                <input type="text" name ="player-4" value = "Enter Name">
+                <button class="confirm-player" id="player-4-button" type="button">Confirm</button>
+                </form>
+
+                <form class ="player-5 player-6 player-7 player-8">
+                <input type="text" name ="player-5" value = "Enter Name">
+                <button class="confirm-player" id="player-5-button" type="button">Confirm</button>
+                </form>
+
+                <form class ="player-6 player-7 player-8">
+                <input type="text" name ="player-6" value = "Enter Name">
+                <button class="confirm-player" id="player-6-button" type="button">Confirm</button>
+                </form>
+
+                <form class ="player-7 player-8">
+                <input type="text" name ="player-7" value = "Enter Name">
+                <button class="confirm-player" id="player-7-button" type="button">Confirm</button>
+                </form>
+
+                <form class ="player-8">
+                <input type="text" name ="player-8" value = "Enter Name">
+                <button class="confirm-player" id="player-8-button" type="button">Confirm</button>
+                </form>
+            </div>
         </div>
-    </form>
 
-    <section id="enter-player-name">
-       
-        <form class ="player-4 player-5 player-6 player-7 player-8">
-        <input type="text" name ="player-1" value = "Enter Name">
-        <button class="confirm-player" type="button">Confirm</button>
-        </form>
+        <div id="player-name-right-box">
+            <table id="form-entry">  
+                <tr>
+                    <th>Player Name</th>  
+                    <th>Player Record (W-D-L)</th>  
+                </tr>
+                <tr>
+                    <td id="name-1"></td>
+                    <td id="score-1"></td>
+                </tr>
+                <tr>
+                    <td id="name-2"></td>
+                    <td id="score-2"></td>
+                </tr>
+                <tr>
+                    <td id="name-3"></td>
+                    <td id="score-3"></td>
+                </tr>
+                <tr>
+                    <td id="name-4"></td>
+                    <td id="score-4"></td>
+                </tr>
+                <tr>
+                    <td id="name-5"></td>
+                    <td id="score-5"></td>
+                </tr>
+                <tr>
+                    <td id="name-6"></td>
+                    <td id="score-6"></td>
+                </tr>
+                <tr>
+                    <td id="name-7"></td>
+                    <td id="score-7"></td>
+                </tr>
+                <tr>
+                    <td id="name-8"></td>
+                    <td id="score-8"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+ </section>
+ 
+ <section id="matchups">
+    <h2 class="score-page-titles">Match Up 1</h2>
 
-        <form class ="player-4 player-5 player-6 player-7 player-8">
-        <input type="text" name ="player-2" value = "Enter Name">
-        <button class="confirm-player" type="button">Confirm</button>
-        </form>
+        <div id="matchup1">
+            <p class="player-matchup" id="p1"></p>
+            <input type="number" class="counter" value="0" max="2" min="0">
+            <p>-</p>
+            <input type="number" class="counter" value="0" max="2" min="0">
+            <p class="player-matchup" id="p2"></p>
+            <button class="submit-score">Submit</button>
+            <div class="result-message">
+                <p class="winning-message">Player X wins X-X</p>
+                <p class="draw">Draw X-X</p>
+            </div>
+        </div>
 
-        <form class ="player-4 player-5 player-6 player-7 player-8">
-        <input type="text" name ="player-3" value = "Enter Name">
-        <button class="confirm-player" type="button">Confirm</button>
-        </form>
+        <div id="matchup2">
+            <p class="player-matchup" id="p3"></p>
+            <input type="number" class="counter" value="0" max="2" min="0">
+            <p>-</p>
+            <input type="number" class="counter" value="0" max="2" min="0">
+            <p class="player-matchup" id="p4"></p>
+            <button class="submit-score">Submit</button>
+        </div>
 
-        <form class ="player-4 player-5 player-6 player-7 player-8">
-        <input type="text" name ="player-4" value = "Enter Name">
-        <button class="confirm-player" type="button">Confirm</button>
-        </form>
+        <div id="matchup3">
+            <p class="player-matchup" id="p5"></p>
+            <input type="number" class="counter" value="0" max="2" min="0">
+            <p>-</p>
+            <input type="number" class="counter" value="0" max="2" min="0">
+            <p class="player-matchup" id="p6"></p>
+            <button class="submit-score">Submit</button>
+        </div>
 
-        <form class ="player-5 player-6 player-7 player-8">
-        <input type="text" name ="player-5" value = "Enter Name">
-        <button class="confirm-player" type="button">Confirm</button>
-         </form>
+        <div id="matchup4">
+            <p class="player-matchup" id="p7" ></p>
+            <input type="number"class="counter" value="0" max="2" min="0">
+            <p>-</p>
+            <input type="number" class="counter" value="0" max="2" min="0">
+            <p class="player-matchup" id="p8"></p>
+            <button class="submit-score">Submit</button>
+        </div>
 
-        <form class ="player-6 player-7 player-8">
-        <input type="text" name ="player-6" value = "Enter Name">
-        <button class="confirm-player" type="button">Confirm</button>
-        </form>
-
-        <form class ="player-7 player-8">
-        <input type="text" name ="player-7" value = "Enter Name">
-        <button class="confirm-player" type="button">Confirm</button>
-        </form>
-
-        <form class ="player-8">
-        <input type="text" name ="player-8" value = "Enter Name">
-        <button class="confirm-player" type="button">Confirm</button>
-        </form>
-    
-    </section>
+        <button id="startMatchups">Start Matchups</button>
+ </section>
 
    <script src= "enterPlayer.js"></script>
 </body>

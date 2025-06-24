@@ -42,3 +42,4 @@ const draftTable = () => {
 }
 
 submit.onclick = draftTable;
+
