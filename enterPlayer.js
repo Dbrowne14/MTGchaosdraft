@@ -182,31 +182,83 @@ let p5Grab  = document.getElementById('p5');
 let p6Grab  = document.getElementById('p6');
 let p7Grab  = document.getElementById('p7');
 let p8Grab  = document.getElementById('p8');
-
-let pGrabArray = [p1Grab, p2Grab, p3Grab, p4Grab, p5Grab, p6Grab, p7Grab, p8Grab];
-let referenceArray =[player1Output, player2Output, player3Output, player4Output, player5Output, player6Output, player7Output, player8Output];
 let startButton =  document.getElementById('startMatchups');
+
+//Array creation for shuffling
+let pGrabArray4 = [p1Grab, p2Grab, p3Grab, p4Grab];
+let pGrabArray6 = [p1Grab, p2Grab, p3Grab, p4Grab, p5Grab, p6Grab];
+let pGrabArray8 = [p1Grab, p2Grab, p3Grab, p4Grab, p5Grab, p6Grab, p7Grab, p8Grab];
+
+let referenceArray4 =[player1Output, player2Output, player3Output, player4Output];
+let referenceArray6 =[player1Output, player2Output, player3Output, player4Output, player5Output, player6Output];
+let referenceArray8 =[player1Output, player2Output, player3Output, player4Output, player5Output, player6Output, player7Output, player8Output];
+
+
 
 // simulator function
 const matchupSimulator = () => {
 
 //fisher-yates shuffle method
+if (numberOfPlayers.value === '8') {
 
-for (let i=0; i<pGrabArray.length; i++) {
+    for (let i=0; i<pGrabArray8.length; i++) {
 
-    let j = Math.floor(Math.random()*(i+ 1));
-    [pGrabArray[i],pGrabArray[j]] = [pGrabArray[j], pGrabArray[i]];
+        let j = Math.floor(Math.random()*(i+ 1));
+        [pGrabArray8[i],pGrabArray8[j]] = [pGrabArray8[j], pGrabArray8[i]];
+        
+        }
+
+    for (let k=0; k<referenceArray8.length;k++) {
+        pGrabArray8[k].textContent = referenceArray8[k].textContent;
+        }
+
+    startButton.style.display = 'none'
+
+
+    }
+
+else if (numberOfPlayers.value === '6') {
+
+    for (let i=0; i<pGrabArray6.length; i++) {
+
+        let j = Math.floor(Math.random()*(i+ 1));
+        [pGrabArray6[i],pGrabArray6[j]] = [pGrabArray6[j], pGrabArray6[i]];
+            
+        }
+
+    for (let k=0; k<referenceArray6.length;k++) {
+        pGrabArray6[k].textContent = referenceArray6[k].textContent;
+        }
+
+    startButton.style.display = 'none'
+
+
+    }
     
+else if (numberOfPlayers.value === '4') {
+
+    for (let i=0; i<pGrabArray4.length; i++) {
+
+        let j = Math.floor(Math.random()*(i+ 1));
+        [pGrabArray4[i],pGrabArray4[j]] = [pGrabArray4[j], pGrabArray4[i]];
+            
+        }
+
+    for (let k=0; k<referenceArray4.length;k++) {
+        pGrabArray4[k].textContent = referenceArray4[k].textContent;
+        }
+
+    startButton.style.display = 'none'
+
+
     }
 
-for (let k=0; k<referenceArray.length;k++) {
-    pGrabArray[k].textContent = referenceArray[k].textContent;
-    }
-
-startButton.style.display = 'none'
-
+else {
+    alert("To play you must enter players with even numbers between 4-8")
+}
 
 }
+
 
 startButton.addEventListener('click', matchupSimulator);
 
@@ -246,3 +298,51 @@ const observer = new MutationObserver ((mutations4) => {
 })
 
 observer.observe(matchupFour, {characterData: true, subtree: true, childList: true});
+
+
+// Score from MatchUp1
+
+//get score components
+let winningMessage1 = document.getElementById('winningMessage1');
+let drawMessage1 = document.getElementById('drawMessage1')
+let p1Score = document.getElementById('p1Score');
+let p2Score = document.getElementById('p2Score')
+let winningPlayer1 = document.getElementById('winPlayer');
+let winResult1 = document.getElementById('p1w1');
+let winResult2= document.getElementById('p2w1');
+let drawResult1 = document.getElementById('p1d1');
+let drawResult2 = document.getElementById('p2d1');
+
+
+let sumbitScore1 = document.getElementById('submitScore1')
+
+const determineWinner = () => {
+    
+    if (p1Score.value > p2Score.value) {
+        drawMessage1.style.display = 'none'; //removes any other message
+        winningMessage1.style.display = 'block'
+        winningPlayer1.style.fontWeight = 'bold';
+        winningPlayer1.textContent = p1Grab.textContent;
+        winResult1.textContent = p1Score.value;
+        winResult2.textContent = p2Score.value;
+    }
+
+    else if (p2Score.value > p1Score.value) {
+        drawMessage1.style.display = 'none'; //removes any other message
+        winningMessage1.style.display = 'block';
+        winningPlayer1.style.fontWeight = 'bold';
+        winningPlayer1.textContent = p2Grab.textContent;
+        winResult1.textContent = p2Score.value;
+        winResult2.textContent = p1Score.value;
+    }
+
+    else {
+        winningMessage1.style.display = 'none'; //removes any other message
+        drawMessage1.style.display = 'block';
+        drawResult1.textContent = p1Score.value;
+        drawResult2.textContent = p2Score.value;
+    }
+
+}
+
+sumbitScore1.addEventListener('click', determineWinner);

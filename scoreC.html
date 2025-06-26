@@ -88,7 +88,7 @@
             <table id="form-entry">  
                 <tr>
                     <th>Player Name</th>  
-                    <th>Player Record (W-D-L)</th>  
+                    <th>Player Record (W-L)</th>  
                 </tr>
                 <tr>
                     <td id="name-1"></td>
@@ -132,42 +132,70 @@
 
         <div id="matchup1">
             <p class="player-matchup" id="p1"></p>
-            <input type="number" class="counter" value="0" max="2" min="0">
+            <input type="number" class="counter" id="p1Score" value="0" max="2" min="0">
             <p>-</p>
-            <input type="number" class="counter" value="0" max="2" min="0">
+            <input type="number" class="counter" id="p2Score" value="0" max="2" min="0">
             <p class="player-matchup" id="p2"></p>
-            <button class="submit-score">Submit</button>
+            <button class="submit-score" id="submitScore1">Submit</button>
             <div class="result-message">
-                <p class="winning-message">Player X wins X-X</p>
-                <p class="draw">Draw X-X</p>
+                <p class="winning-message" id="winningMessage1">
+                    <span id="winPlayer">Player</span> wins <span id="p1w1">X</span>-<span id="p2w1">X</span>
+                </p>
+                <p class="draw" id="drawMessage1">
+                    Draw <span id="p1d1">X</span>-<span id="p2d1">X</span>
+                </p>
             </div>
         </div>
 
         <div id="matchup2">
             <p class="player-matchup" id="p3"></p>
-            <input type="number" class="counter" value="0" max="2" min="0">
+            <input type="number" class="counter" id="p3Score" value="0" max="2" min="0">
             <p>-</p>
-            <input type="number" class="counter" value="0" max="2" min="0">
+            <input type="number" class="counter" id="p4Score" value="0" max="2" min="0">
             <p class="player-matchup" id="p4"></p>
-            <button class="submit-score">Submit</button>
+            <button class="submit-score" id="submitScore2">Submit</button>
+            <div class="result-message">
+                <p class="winning-message" id="winningMessage2">
+                    <span id="winPlayer">Player</span> wins <span id="p3w2">X</span>-<span id="p4w2">X</span>
+                </p>
+                <p class="draw" id="drawMessage2">
+                    Draw <span id="p3d2">X</span>-<span id="p4d2">X</span>
+                </p>
+            </div>
         </div>
 
         <div id="matchup3">
             <p class="player-matchup" id="p5"></p>
-            <input type="number" class="counter" value="0" max="2" min="0">
+            <input type="number" class="counter" id="p5Score" value="0" max="2" min="0">
             <p>-</p>
-            <input type="number" class="counter" value="0" max="2" min="0">
+            <input type="number" class="counter" id="p6Score" value="0" max="2" min="0">
             <p class="player-matchup" id="p6"></p>
-            <button class="submit-score">Submit</button>
+            <button class="submit-score" id="submitScore3">Submit</button>
+            <div class="result-message">
+                <p class="winning-message" id="winningMessage3">
+                    <span id="winPlayer">Player</span> wins <span id="p5w3">X</span>-<span id="p6w3">X</span>
+                </p>
+                <p class="draw" id="drawMessage3">
+                    Draw <span id="p5d3">X</span>-<span id="p6d3">X</span>
+                </p>
+            </div>
         </div>
 
         <div id="matchup4">
             <p class="player-matchup" id="p7" ></p>
-            <input type="number"class="counter" value="0" max="2" min="0">
+            <input type="number" class="counter" id="p7Score" value="0" max="2" min="0">
             <p>-</p>
-            <input type="number" class="counter" value="0" max="2" min="0">
+            <input type="number" class="counter" id="p8Score" value="0" max="2" min="0">
             <p class="player-matchup" id="p8"></p>
-            <button class="submit-score">Submit</button>
+            <button class="submit-score" id="submitScore4">Submit</button>
+            <div class="result-message">
+                <p class="winning-message" id="winningMessage4">
+                    <span id="winPlayer">Player</span> wins <span id="p7w4">X</span>-<span id="p8w4">X</span>
+                </p>
+                <p class="draw" id="drawMessage4">
+                    Draw <span id="p7d4">X</span>-<span id="p8d4">X</span>
+                </p>
+            </div>
         </div>
 
         <button id="startMatchups">Start Matchups</button>
