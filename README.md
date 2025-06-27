@@ -11,7 +11,6 @@ A simple web application to introduce chaos drafting and **track player scores**
 - Enter players and Shuffle matchups ✅ 
 - Track scores and wins/losses in Chaos Drafts
 - Provide a lightweight, no-login scoreboard for in-person or remote play
-- Keep the draft experience organized without needing pen and paper
 
 ---
 
