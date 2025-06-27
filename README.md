@@ -38,4 +38,4 @@ A simple web application to introduce chaos drafting and **track player scores**
 
 1. Clone or download the repository:
 ```bash
-git clone https://github.com/Dbrowne14/chaos-draft-score-tracker.git
+[git clone https://github.com/Dbrowne14/MTGchaosdraft.git]
