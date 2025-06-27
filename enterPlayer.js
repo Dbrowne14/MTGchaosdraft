@@ -1,5 +1,7 @@
 
-//interaction for score.html
+/*----------interaction for score.html---------*/
+
+/*----------Number of Players----------*/
 
 //get players
 let fourPlayer = document.getElementsByClassName("player-4");
@@ -57,7 +59,7 @@ console.log(nameSubmit, numberOfPlayers, fourPlayer)
 
 nameSubmit.addEventListener("click", setPlayerInput)
 
-//Record table script
+/*----------Record table----------*/
 
 // Get Player 1
 
@@ -171,7 +173,7 @@ const playerEightStore = () => {
 
 player8Button.addEventListener('click',playerEightStore);
 
-//Assign players
+/*----------Assign players & begin matchup----------*/
 
 //player grab for randomiser
 let p1Grab  = document.getElementById('p1');
@@ -300,23 +302,66 @@ const observer = new MutationObserver ((mutations4) => {
 observer.observe(matchupFour, {characterData: true, subtree: true, childList: true});
 
 
-// Score from MatchUp1
 
-//get score components
+/*---------get score from matchups--------*/
+
+
+//get winningMessage
 let winningMessage1 = document.getElementById('winningMessage1');
+let winningMessage2 = document.getElementById('winningMessage2');
+let winningMessage3 = document.getElementById('winningMessage3');
+let winningMessage4 = document.getElementById('winningMessage4');
+//get drawMessage
 let drawMessage1 = document.getElementById('drawMessage1')
+let drawMessage2 = document.getElementById('drawMessage2')
+let drawMessage3 = document.getElementById('drawMessage3')
+let drawMessage4 = document.getElementById('drawMessage4')
+
+//get scores(input)
 let p1Score = document.getElementById('p1Score');
 let p2Score = document.getElementById('p2Score')
-let winningPlayer1 = document.getElementById('winPlayer');
+let p3Score = document.getElementById('p3Score');
+let p4Score = document.getElementById('p4Score')
+let p5Score = document.getElementById('p5Score');
+let p6Score = document.getElementById('p6Score')
+let p7Score = document.getElementById('p7Score');
+let p8Score = document.getElementById('p8Score')
+
+//get Winning Player
+let winningPlayer1 = document.getElementById('winPlayer1');
+let winningPlayer2 = document.getElementById('winPlayer2');
+let winningPlayer3 = document.getElementById('winPlayer3');
+let winningPlayer4 = document.getElementById('winPlayer4');
+
+//get Result (if we have a winner)
 let winResult1 = document.getElementById('p1w1');
 let winResult2= document.getElementById('p2w1');
+let winResult3 = document.getElementById('p3w2');
+let winResult4= document.getElementById('p4w2');
+let winResult5 = document.getElementById('p5w3');
+let winResult6= document.getElementById('p6w3');
+let winResult7 = document.getElementById('p7w4');
+let winResult8= document.getElementById('p8w4');
+
+//get result (if a draw)
 let drawResult1 = document.getElementById('p1d1');
 let drawResult2 = document.getElementById('p2d1');
+let drawResult3 = document.getElementById('p3d2');
+let drawResult4 = document.getElementById('p4d2');
+let drawResult5 = document.getElementById('p5d3');
+let drawResult6 = document.getElementById('p6d3');
+let drawResult7 = document.getElementById('p7d4');
+let drawResult8 = document.getElementById('p8d4');
 
-
+//get submit button
 let sumbitScore1 = document.getElementById('submitScore1')
+let sumbitScore2 = document.getElementById('submitScore2')
+let sumbitScore3 = document.getElementById('submitScore3')
+let sumbitScore4 = document.getElementById('submitScore4')
 
-const determineWinner = () => {
+/* -----Score from MatchUp1-----*/
+
+const determineWinner1 = () => {
     
     if (p1Score.value > p2Score.value) {
         drawMessage1.style.display = 'none'; //removes any other message
@@ -345,4 +390,103 @@ const determineWinner = () => {
 
 }
 
-sumbitScore1.addEventListener('click', determineWinner);
+sumbitScore1.addEventListener('click', determineWinner1);
+
+/* -----Score from MatchUp2-----*/
+
+const determineWinner2 = () => {
+    
+    if (p3Score.value > p4Score.value) {
+        drawMessage2.style.display = 'none'; //removes any other message
+        winningMessage2.style.display = 'block'
+        winningPlayer2.style.fontWeight = 'bold';
+        winningPlayer2.textContent = p3Grab.textContent;
+        winResult3.textContent = p3Score.value;
+        winResult4.textContent = p4Score.value;
+    }
+
+    else if (p4Score.value > p3Score.value) {
+        drawMessage2.style.display = 'none'; //removes any other message
+        winningMessage2.style.display = 'block';
+        winningPlayer2.style.fontWeight = 'bold';
+        winningPlayer2.textContent = p4Grab.textContent;
+        winResult3.textContent = p4Score.value;
+        winResult4.textContent = p3Score.value;
+    }
+
+    else {
+        winningMessage2.style.display = 'none'; //removes any other message
+        drawMessage2.style.display = 'block';
+        drawResult3.textContent = p3Score.value;
+        drawResult4.textContent = p4Score.value;
+    }
+
+}
+
+sumbitScore2.addEventListener('click', determineWinner2);
+
+/* -----Score from MatchUp3-----*/
+
+const determineWinner3 = () => {
+    
+    if (p5Score.value > p6Score.value) {
+        drawMessage3.style.display = 'none'; //removes any other message
+        winningMessage3.style.display = 'block'
+        winningPlayer3.style.fontWeight = 'bold';
+        winningPlayer3.textContent = p5Grab.textContent;
+        winResult5.textContent = p5Score.value;
+        winResult6.textContent = p6Score.value;
+    }
+
+    else if (p6Score.value > p5Score.value) {
+        drawMessage3.style.display = 'none'; //removes any other message
+        winningMessage3.style.display = 'block';
+        winningPlayer3.style.fontWeight = 'bold';
+        winningPlayer3.textContent = p6Grab.textContent;
+        winResult5.textContent = p6Score.value;
+        winResult6.textContent = p5Score.value;
+    }
+
+    else {
+        winningMessage3.style.display = 'none'; //removes any other message
+        drawMessage3.style.display = 'block';
+        drawResult5.textContent = p5Score.value;
+        drawResult6.textContent = p6Score.value;
+    }
+
+}
+
+sumbitScore3.addEventListener('click', determineWinner3);
+
+/* -----Score from MatchUp4-----*/
+
+const determineWinner4 = () => {
+    
+    if (p7Score.value > p8Score.value) {
+        drawMessage4.style.display = 'none'; //removes any other message
+        winningMessage4.style.display = 'block'
+        winningPlayer4.style.fontWeight = 'bold';
+        winningPlayer4.textContent = p7Grab.textContent;
+        winResult7.textContent = p7Score.value;
+        winResult8.textContent = p8Score.value;
+    }
+
+    else if (p8Score.value > p7Score.value) {
+        drawMessage4.style.display = 'none'; //removes any other message
+        winningMessage4.style.display = 'block';
+        winningPlayer4.style.fontWeight = 'bold';
+        winningPlayer4.textContent = p8Grab.textContent;
+        winResult7.textContent = p8Score.value;
+        winResult8.textContent = p7Score.value;
+    }
+
+    else {
+        winningMessage4.style.display = 'none'; //removes any other message
+        drawMessage4.style.display = 'block';
+        drawResult7.textContent = p7Score.value;
+        drawResult8.textContent = p8Score.value;
+    }
+
+}
+
+sumbitScore4.addEventListener('click', determineWinner4);

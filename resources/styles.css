@@ -281,7 +281,7 @@ th {
     font-weight: bold;
 }
 
-.submit-score {
+.submit-score, .result-message {
     margin-left: 2rem;
 }
 
@@ -289,7 +289,7 @@ th {
     position:relative
 }
 
-#matchup3, #matchup4 {
+.winning-message, .draw, #matchup3, #matchup4 {
     display: none;
 }
 
