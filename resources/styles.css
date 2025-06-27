@@ -154,7 +154,7 @@ footer {
     box-sizing: border-box;
     margin-top: 6rem;
     padding: 2rem 2rem;
-    border: 0.2rem double darkgoldenrod;
+    /*border: 0.2rem double darkgoldenrod; - commented out not sure*/ 
 }
 
 /*draft page*/
